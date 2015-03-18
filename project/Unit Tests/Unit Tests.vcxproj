@@ -53,10 +53,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <ObjectFileName>$(IntDir)/obj/obj/obj/%(RelativeDir)/</ObjectFileName>
+      <ObjectFileName>$(IntDir)/obj/</ObjectFileName>
+      <AdditionalIncludeDirectories>E:\Programowanie\Biblioteki\GoogleTest 1.7.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>E:\Programowanie\Biblioteki\GoogleTest 1.7.0\msvc\gtest-md;..\..\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Game.exe.lib;gtestd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -66,18 +69,25 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <ObjectFileName>$(IntDir)/obj/obj/obj/%(RelativeDir)/</ObjectFileName>
+      <ObjectFileName>$(IntDir)/obj/</ObjectFileName>
+      <AdditionalIncludeDirectories>E:\Programowanie\Biblioteki\GoogleTest 1.7.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>E:\Programowanie\Biblioteki\GoogleTest 1.7.0\msvc\gtest-md;..\..\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Game.exe.lib;gtest.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ProjectReference Include="..\Game\Game.vcxproj">
       <Project>{de15a704-d7fe-45ef-a6ce-26114da58aa0}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\tests\main.cpp" />
+    <ClCompile Include="..\..\tests\TestsBoard.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -7,8 +7,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Game", "Game\Game.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Unit Tests", "Unit Tests\Unit Tests.vcxproj", "{D32F49EB-9703-4E58-81D6-4B1CBF4BBF65}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility Library", "..\..\..\Biblioteki\Utility library\project\Utility Library.vcxproj", "{A18BA2DC-A847-4094-9A2B-40935A118E4F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -23,10 +21,6 @@ Global
 		{D32F49EB-9703-4E58-81D6-4B1CBF4BBF65}.Debug|Win32.Build.0 = Debug|Win32
 		{D32F49EB-9703-4E58-81D6-4B1CBF4BBF65}.Release|Win32.ActiveCfg = Release|Win32
 		{D32F49EB-9703-4E58-81D6-4B1CBF4BBF65}.Release|Win32.Build.0 = Release|Win32
-		{A18BA2DC-A847-4094-9A2B-40935A118E4F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{A18BA2DC-A847-4094-9A2B-40935A118E4F}.Debug|Win32.Build.0 = Debug|Win32
-		{A18BA2DC-A847-4094-9A2B-40935A118E4F}.Release|Win32.ActiveCfg = Release|Win32
-		{A18BA2DC-A847-4094-9A2B-40935A118E4F}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

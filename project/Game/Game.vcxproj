@@ -53,11 +53,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <ObjectFileName>$(IntDir)/obj/obj/obj/%(RelativeDir)/</ObjectFileName>
+      <ObjectFileName>$(IntDir)/obj/</ObjectFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <PostBuildEvent>
+      <Command>lib /NOLOGO /OUT:"$(TargetPath).lib" "$(ProjectDir)\$(IntDir)\obj\*.obj"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -66,24 +69,30 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <ObjectFileName>$(IntDir)/obj/obj/obj/%(RelativeDir)/</ObjectFileName>
+      <ObjectFileName>$(IntDir)/obj/</ObjectFileName>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <PostBuildEvent>
+      <Command>lib /LTCG /NOLOGO /OUT:"$(TargetPath).lib" "$(ProjectDir)\$(IntDir)\obj\*.obj"</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\Controller\LogicHandler.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
+    <ClCompile Include="..\..\src\Model\Board.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\Controller\LogicHandler.h" />
+    <ClInclude Include="..\..\src\Controller\Player.h" />
+    <ClInclude Include="..\..\src\Model\Board.h" />
+    <ClInclude Include="..\..\src\Model\Chip.h" />
+    <ClInclude Include="..\..\src\Model\GameStatus.h" />
+    <ClInclude Include="..\..\src\Model\Move.h" />
     <ClInclude Include="..\..\src\Version.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Biblioteki\Utility library\project\Utility Library.vcxproj">
-      <Project>{a18ba2dc-a847-4094-9a2b-40935a118e4f}</Project>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
