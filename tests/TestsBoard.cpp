@@ -44,9 +44,28 @@ TEST(testBoard, testEmptyAfterReset) {
     }
 }
 
-TEST(testBoard, testInProgressOnInitialization) {
+TEST(testBoard, testStatusOnInitialization) {
     Model::Board board;
 
-    ASSERT_EQ(Model::GameStatus::InProgress, board.checkStatus(Model::Chip::Yellow));
-    ASSERT_EQ(Model::GameStatus::InProgress, board.checkStatus(Model::Chip::Red));
+    ASSERT_EQ(Model::GameStatus::InProgress, board.getStatus());
+}
+
+TEST(testBoard, testValidMovesWhenPossible) {
+    Model::Board board;
+
+    for(unsigned int row = 0; row < board.getArray().size(); ++row) {
+        for(unsigned int slot = 0; slot < board.getArray()[row].size(); ++slot) {
+            bool isPossible = board.isValid(static_cast<Model::Move>(slot));
+            bool moveMade = board.makeMove(static_cast<Model::Move>(slot), Model::Chip::Red);
+            ASSERT_TRUE(isPossible);
+            ASSERT_TRUE(moveMade);
+        }
+    }
+
+    for(unsigned int slot = 0; slot < board.getArray()[0].size(); ++slot) {
+        bool isPossible = board.isValid(static_cast<Model::Move>(slot));
+        bool moveMade = board.makeMove(static_cast<Model::Move>(slot), Model::Chip::Red);
+        ASSERT_FALSE(isPossible);
+        ASSERT_FALSE(moveMade);
+    }
 }

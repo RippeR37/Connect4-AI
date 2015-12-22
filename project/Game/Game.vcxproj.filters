@@ -32,6 +32,24 @@
     <ClCompile Include="..\..\src\Model\Board.cpp">
       <Filter>Source Files\Models</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Controller\Player.cpp">
+      <Filter>Source Files\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Controller\PlayerHuman.cpp">
+      <Filter>Source Files\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Controller\PlayerAIRandom.cpp">
+      <Filter>Source Files\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Controller\PlayerAIMinMax.cpp">
+      <Filter>Source Files\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Controller\PlayerAIAlfaBeta.cpp">
+      <Filter>Source Files\Controllers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Controller\PlayerAIAlfaBetaHeuristic.cpp">
+      <Filter>Source Files\Controllers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Version.h">
@@ -54,6 +72,21 @@
     </ClInclude>
     <ClInclude Include="..\..\src\Model\GameStatus.h">
       <Filter>Header Files\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Controller\PlayerHuman.h">
+      <Filter>Header Files\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Controller\PlayerAIRandom.h">
+      <Filter>Header Files\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Controller\PlayerAIMinMax.h">
+      <Filter>Header Files\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Controller\PlayerAIAlfaBeta.h">
+      <Filter>Header Files\Controllers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Controller\PlayerAIAlfaBetaHeuristic.h">
+      <Filter>Header Files\Controllers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

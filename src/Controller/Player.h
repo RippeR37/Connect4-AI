@@ -16,16 +16,16 @@ namespace Controller {
             Player(const Player&) = delete;
             Player& operator=(const Player&) = delete;
 
-            virtual const Model::Move getMove(const Model::Board& board) = 0;
+            virtual Model::Move getMove(const Model::Board& board) = 0;
 
-            const Model::Chip getChip() const;
+            Model::Chip getChip() const;
 
-        private:
+        protected:
             void setChip(const Model::Chip chip);
 
             Model::Chip _chip;
 
-        private:
+        protected:
             friend class LogicHandler;
     };
 

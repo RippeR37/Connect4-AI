@@ -82,12 +82,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Controller\LogicHandler.cpp" />
+    <ClCompile Include="..\..\src\Controller\Player.cpp" />
+    <ClCompile Include="..\..\src\Controller\PlayerAIAlfaBeta.cpp" />
+    <ClCompile Include="..\..\src\Controller\PlayerAIAlfaBetaHeuristic.cpp" />
+    <ClCompile Include="..\..\src\Controller\PlayerAIMinMax.cpp" />
+    <ClCompile Include="..\..\src\Controller\PlayerAIRandom.cpp" />
+    <ClCompile Include="..\..\src\Controller\PlayerHuman.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\Model\Board.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Controller\LogicHandler.h" />
     <ClInclude Include="..\..\src\Controller\Player.h" />
+    <ClInclude Include="..\..\src\Controller\PlayerAIAlfaBeta.h" />
+    <ClInclude Include="..\..\src\Controller\PlayerAIAlfaBetaHeuristic.h" />
+    <ClInclude Include="..\..\src\Controller\PlayerAIMinMax.h" />
+    <ClInclude Include="..\..\src\Controller\PlayerAIRandom.h" />
+    <ClInclude Include="..\..\src\Controller\PlayerHuman.h" />
     <ClInclude Include="..\..\src\Model\Board.h" />
     <ClInclude Include="..\..\src\Model\Chip.h" />
     <ClInclude Include="..\..\src\Model\GameStatus.h" />

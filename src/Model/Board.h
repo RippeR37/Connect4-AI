@@ -23,16 +23,25 @@ namespace Model {
 
             void reset();
 
-            const bool show() const;
-            const bool makeMove(const Move move, const Chip chip);
-            const GameStatus checkStatus(const Chip playersChip) const;
+            bool show() const;
+            bool makeMove(const Move move, const Chip chip);
 
-            const bool isValid(const Move move) const;
-            const std::vector<const Move> getMoves() const;
+            GameStatus checkStatus() const;
+            GameStatus checkStatusOnMove(const Move move, const Chip chip) const;
+
+            bool isValid(const Move move) const;
+            std::vector<const Move> getMoves() const;
             const BoardArray& getArray() const;
+            GameStatus getStatus() const;
 
         private:
+            bool checkEndConditionOnMove(const unsigned int row, const unsigned int column) const;
+
+            unsigned int _lastMoveX;
+            unsigned int _lastMoveY;
+
             BoardArray _array;
+            GameStatus _status;
     };
 
 }
